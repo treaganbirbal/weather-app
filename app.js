@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
           })
           .then(data => {
             console.log(data)
+            const {temperture, summary} = data.currently;
 
         })
     });
