@@ -19,7 +19,7 @@ window.addEventListener('load', () => {
           return response.json();
           })
           .then(data => {
-            const {temperature, summary} = data.currently;
+            const {temperature, summary, icon} = data.currently;
             //set DOM elements from the API
             temperatureDegree.textContent = temperature
             temperatureDescription.textContent = summary
@@ -30,4 +30,6 @@ window.addEventListener('load', () => {
   } else {
     h1.textContent = "Need location to find weather. Please enable Location in browser settings"
   }
+
+  
 });
