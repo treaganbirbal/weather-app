@@ -25,6 +25,7 @@ window.addEventListener('load', () => {
             temperatureDescription.textContent = summary
             locationTimezone.textContent = data.timezone;
             //set icons
+            setIcons(icon, document.querySelector('.icon'))
         })
     });
 
@@ -32,8 +33,8 @@ window.addEventListener('load', () => {
     h1.textContent = "Need location to find weather. Please enable Location in browser settings"
   }
 
-  function setIcon(icon, iconID){
-    const skycons = new skycons({color: "white"})
+  function setIcons(icon, iconID){
+    const skycons = new Skycons({color: "white"})
     const currentIcon = icon.replace(/-/g, "_").toUpperCase();
     skycons.play();
     return skycons.set(iconID, Skycons[currentIcon]);
